@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kotak Bercahaya dengan Latar Belakang Gelap</title>
+
+<style>
+    body {
+        background-color: #1a1a1a; /* Warna latar belakang body gelap */
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding:20px;
+      width: 150px;
+      background: linear-gradient(to right, #52f85244 20%, #25f4f644 80%);
+    }
+    label {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      font-size: 20px;
+      color: white;
+    }
+    input {
+      align-items: center;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    input:focus {
+      outline: none;
+    }
+    .box {
+        width: 200px;
+        height: 100px;
+        background: linear-gradient(to right, #4b48f680, #a09ffb80);
+        border: 1px solid #ccc;
+        box-shadow: 0 0 20px 5px rgba(0, 0, 255, 0.5); /* Efek bayangan biru dengan blur 20px */
+    }
+</style>
+
+<script>
+    function ubahUkuran() {
+        var widthValue = document.getElementById('widthInput').value;
+        var heightValue = document.getElementById('heightInput').value;
+
+        var elem = document.getElementById('myElement');
+        elem.style.width = widthValue + 'px';
+        elem.style.height = heightValue + 'px';
+    }
+</script>
+
+</head>
+<body>
+<div class="container">
+    <div id="myElement" class="box">
+        Ini adalah sebuah div.
+    </div>
+
+    <h1><label for="widthInput">Lebar:</label>
+    <input type="number" id="widthInput" value="200"></h1>
+    <h1><label for="heightInput">Tinggi:</label>
+    <input type="number" id="heightInput" value="100"></h1>
+    <button onclick="ubahUkuran()">Ubah Ukuran</button> <!-- Tombol untuk memicu perubahan ukuran -->
+</div>
+</body>
+</html>
